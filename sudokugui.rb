@@ -343,6 +343,9 @@ end
 
 def solve
   @grid = @orig_grid
+  @bzones=@orig_bzones
+  @rzones=@orig_rzones
+  @czones=@orig_czones
   r()
   gprint()
   for i in (0..8)
@@ -361,7 +364,6 @@ def calculate
         rval(@gridentry[i][j].val,i,j)
       end
     end
-    gprint()
     if playwin() == true
       text = 'Yes!  You won!'
     else
